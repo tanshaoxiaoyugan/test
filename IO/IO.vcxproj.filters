@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{1ec9a79f-3abf-4c5a-98d1-72f0ec4b3754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Load">
+      <UniqueIdentifier>{1fe46db3-e65f-422e-a753-ee5d496fcc42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Save">
+      <UniqueIdentifier>{4a53f52d-e3e5-465a-8a29-eb3553f022ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="PCLoader.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="PlyLoader.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="IOCommon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="PCLoader.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="PlyLoader.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

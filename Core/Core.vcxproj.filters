@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PointCloud">
+      <UniqueIdentifier>{fc57bed3-b141-426a-bd39-8a31c3398c20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{3e5bf8de-8026-417f-801b-eeb732e5374a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\HeightMap">
+      <UniqueIdentifier>{477084b8-65ad-42e2-ae57-7fced6c51dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{620bc4e0-9325-4aa7-9dce-4e72df82b503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\GradientMap">
+      <UniqueIdentifier>{1db79a96-38b5-465c-8a5b-717ea907a2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\MaskMap">
+      <UniqueIdentifier>{eca9e3d6-05ff-4b5c-abfa-bfee5317b372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solver">
+      <UniqueIdentifier>{41c0914f-dd42-4b58-b85c-f3b73d643eca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HeightMap.cpp">
+      <Filter>Map\HeightMap</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="GradientMap.cpp">
+      <Filter>Map\GradientMap</Filter>
+    </ClCompile>
+    <ClCompile Include="MaskMap.cpp">
+      <Filter>Map\MaskMap</Filter>
+    </ClCompile>
+    <ClCompile Include="MapUtil.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseLinearSolver.cpp">
+      <Filter>Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="SolverBuilder.cpp">
+      <Filter>Solver</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HeightMap.h">
+      <Filter>Map\HeightMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.hpp">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="GradientMap.h">
+      <Filter>Map\GradientMap</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskMap.h">
+      <Filter>Map\MaskMap</Filter>
+    </ClInclude>
+    <ClInclude Include="MapUtil.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseLinearSolver.h">
+      <Filter>Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="SolverBuilder.h">
+      <Filter>Solver</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

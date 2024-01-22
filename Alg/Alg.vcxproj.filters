@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{9eb7b0c0-e70d-44dd-92ae-9a2cdeaaffad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PM">
+      <UniqueIdentifier>{f3ff907e-3897-4c54-adb2-fba50167bd97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageInpainting">
+      <UniqueIdentifier>{74159c01-e265-43cc-8e65-ed73762ae4e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="Inpaint.h">
+      <Filter>PM</Filter>
+    </ClInclude>
+    <ClInclude Include="MeanShift.h">
+      <Filter>PM</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchMatch.h">
+      <Filter>PM</Filter>
+    </ClInclude>
+    <ClInclude Include="PMInterface.h">
+      <Filter>PM</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageInpainting.h">
+      <Filter>ImageInpainting</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageUtil.h">
+      <Filter>ImageInpainting</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="Inpaint.cpp">
+      <Filter>PM</Filter>
+    </ClCompile>
+    <ClCompile Include="MeanShift.cpp">
+      <Filter>PM</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchMatch.cpp">
+      <Filter>PM</Filter>
+    </ClCompile>
+    <ClCompile Include="PMInterface.cpp">
+      <Filter>PM</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageInpainting.cpp">
+      <Filter>ImageInpainting</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageUtil.cpp">
+      <Filter>ImageInpainting</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
