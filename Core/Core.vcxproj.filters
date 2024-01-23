@@ -22,6 +22,21 @@
     <Filter Include="Solver">
       <UniqueIdentifier>{41c0914f-dd42-4b58-b85c-f3b73d643eca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PointCloud\Box">
+      <UniqueIdentifier>{c649a044-e4d0-48bb-8698-262383ce6d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Util">
+      <UniqueIdentifier>{529fd7f1-4c6a-4b7c-a3e8-fafa22905e83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PointCloud\Util">
+      <UniqueIdentifier>{3893e386-7cf6-47b3-9a49-c5d4405a2924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PointCloud\HeightMap">
+      <UniqueIdentifier>{c818ed0f-c959-4c20-982c-89c630866478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Wrapper">
+      <UniqueIdentifier>{ebf4e153-739e-4be0-8af3-325ca39a0eea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HeightMap.cpp">
@@ -36,14 +51,18 @@
     <ClCompile Include="MaskMap.cpp">
       <Filter>Map\MaskMap</Filter>
     </ClCompile>
-    <ClCompile Include="MapUtil.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
     <ClCompile Include="SparseLinearSolver.cpp">
       <Filter>Solver</Filter>
     </ClCompile>
     <ClCompile Include="SolverBuilder.cpp">
       <Filter>Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="PointCloudUtil.cpp" />
+    <ClCompile Include="MapUtil.cpp">
+      <Filter>Map\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMapGenerator.cpp">
+      <Filter>PointCloud\HeightMap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,14 +84,26 @@
     <ClInclude Include="MaskMap.h">
       <Filter>Map\MaskMap</Filter>
     </ClInclude>
-    <ClInclude Include="MapUtil.h">
-      <Filter>Map</Filter>
-    </ClInclude>
     <ClInclude Include="SparseLinearSolver.h">
       <Filter>Solver</Filter>
     </ClInclude>
     <ClInclude Include="SolverBuilder.h">
       <Filter>Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>PointCloud\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MapUtil.h">
+      <Filter>Map\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="PointCloudUtil.h">
+      <Filter>PointCloud\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMapGenerator.h">
+      <Filter>PointCloud\HeightMap</Filter>
+    </ClInclude>
+    <ClInclude Include="MapWrapper.h">
+      <Filter>Map\Wrapper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

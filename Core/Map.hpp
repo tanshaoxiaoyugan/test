@@ -63,6 +63,7 @@ public:
 protected:
 	CMap(uint w, uint h, T v);
 
+	void __release();
 	void __initSize(uint w, uint h);
 	void __initValue(T v);
 
@@ -86,9 +87,7 @@ inline CMap<T>::CMap(uint w, uint h, T v)
 
 template<typename T>
 inline CMap<T>::~CMap() {
-	for (int i = 0; i < m_Width; i++)
-		delete[] m_Data[i];
-	delete[] m_Data;
+	__release();
 }
 
 template<typename T>
@@ -103,8 +102,10 @@ inline void CMap<T>::setHeight(uint h) {
 
 template<typename T>
 inline void CMap<T>::setSize(uint w, uint h) {
-	setWidth(w);
-	setHeight(h);
+	if (m_Width * m_Height != 0) {
+		__release();
+	}
+	__initSize(w, h);
 }
 
 template<typename T>
@@ -114,7 +115,7 @@ inline void CMap<T>::setEmptyValue(T v) {
 
 template<typename T>
 inline bool CMap<T>::setValue(uint i, uint k, T v) {
-	_EARLY_RETURN(i >= m_Width || k >= m_Height, "map set value index invalid.", false);
+	_EARLY_RETURN(i > m_Width || k > m_Height, "map set value index invalid.", false);
 
 	m_Data[i][k] = v;
 	return true;
@@ -172,7 +173,7 @@ inline bool CMap<T>::isValid() const {
 
 template<typename T>
 inline bool CMap<T>::isValid(uint i, uint k) const {
-	_EARLY_RETURN(i >= m_Width || k >= m_Height, "map index invalid: i or k out of scale.", false);
+	_EARLY_RETURN(i > m_Width || k > m_Height, "map index invalid: i or k out of scale.", false);
 
 	if (MathUtil::isNan(m_Data[i][k])) {
 		return false;
@@ -183,7 +184,7 @@ inline bool CMap<T>::isValid(uint i, uint k) const {
 
 template<typename T>
 inline bool CMap<T>::isEmpty(uint i, uint k) const {
-	_EARLY_RETURN(i >= m_Width || k >= m_Height, "map index invalid: i or k out of scale.", false);
+	_EARLY_RETURN(i > m_Width || k > m_Height, "map index invalid: i or k out of scale.", false);
 
 	if (isValid(i, k) && MathUtil::isEqual(m_Data[i][k], m_Empty)) {
 		return true;
@@ -205,6 +206,15 @@ inline bool CMap<T>::isNoEmpty() const {
 	}
 
 	return true;
+}
+
+template<typename T>
+inline void CMap<T>::__release() {
+	for (int i = 0; i < m_Width; i++)
+		delete[] m_Data[i];
+	delete[] m_Data;
+	m_Width = 0;
+	m_Height = 0;
 }
 
 template<typename T>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{6c4a04b2-709f-4a79-925c-dc7ddf3dec0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DGI">
+      <UniqueIdentifier>{62859f9e-6d57-4c7c-93df-e192b3bc07d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="DGI.h">
+      <Filter>DGI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="DGI.cpp">
+      <Filter>DGI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

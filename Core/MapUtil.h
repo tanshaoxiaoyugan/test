@@ -1,15 +1,16 @@
 #pragma once
 
-#include "Map.hpp"
-#include "Heightmap.h"
-#include "GradientMap.h"
-#include "MaskMap.h"
-#include "IOUtil.h"
-
 namespace core {
 
 template <typename T>
 using ptr = std::shared_ptr<T>;
+using uint = std::uint32_t;
+
+template <typename T>
+class CMap;
+class CHeightMap;
+class CGradientMap;
+class CMaskMap;
 
 class MapUtil {
 public:

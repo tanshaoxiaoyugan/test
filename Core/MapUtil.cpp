@@ -1,5 +1,10 @@
 #include "pch.h"
 #include "MapUtil.h"
+#include "Map.hpp"
+#include "Heightmap.h"
+#include "GradientMap.h"
+#include "MaskMap.h"
+#include "IOUtil.h"
 
 using namespace core;
 

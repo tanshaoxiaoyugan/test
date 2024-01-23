@@ -5,4 +5,4 @@
 #include "MathUtil.h"
 #include "IOUtil.h"
 #include "PointCloudType.h"
-#include "PointCloudUtil.h"
+#include "PointUtil.h"

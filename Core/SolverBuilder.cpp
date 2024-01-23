@@ -10,6 +10,7 @@ using namespace core;
 bool CSolverBuilder::run(const ptr<CHeightMap> vRaw, const ptr<CGradientMap> vGoG, const ptr<CGradientMap> vGradient) {
 	_EARLY_RETURN(!vRaw->isValid() || !vGoG->isValid() || !vGradient->isValid(), "solver builder error: input is not valid.", false);
 	_EARLY_RETURN(vRaw->getWidth() != vGoG->getWidth() || vRaw->getWidth() != vGradient->getWidth() || vRaw->getHeight() != vGoG->getHeight() || vRaw->getHeight() != vGradient->getHeight(), "solver builder error: input size is not equal.", false);
+	_EARLY_RETURN(!vGoG->isNoEmpty() || !vGradient->isNoEmpty(), "solver builder error: gradient has empty value.", false);
 
 	m_Raw = vRaw;
 	m_GoG = vGoG;

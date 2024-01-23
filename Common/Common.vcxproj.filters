@@ -8,7 +8,7 @@
     <ClInclude Include="IOUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
-    <ClInclude Include="PointCloudUtil.h">
+    <ClInclude Include="PointUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
     <ClInclude Include="Common.h" />
@@ -21,9 +21,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PointCloudType.cpp">
-      <Filter>PointCloud</Filter>
-    </ClCompile>
     <ClCompile Include="MathUtil.cpp">
       <Filter>Util</Filter>
     </ClCompile>
