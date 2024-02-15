@@ -50,7 +50,6 @@ public:
 		}
 
 		__initSize(m.getSize().first, m.getSize().second);
-
 		for (uint i = 0; i < m_Width; i++) {
 			for (uint k = 0; k < m_Height; k++) {
 				m_Data[i][k] = m[i][k];
